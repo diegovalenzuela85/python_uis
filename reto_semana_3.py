@@ -80,3 +80,25 @@
 #
 #
 # Solucione el reto, escribiendo el código que represente la automatización del proceso de registro de empleados y visitantes.
+
+ingreso_usuario = ""
+ingreso_contrasena = ""
+
+usuario = 'admin'
+contrasena = 'MisionTic2021'
+
+intentos = 0
+
+while usuario != ingreso_usuario and contrasena != ingreso_contrasena and intentos < 3:
+    print('Datos incorrectos. Por favor intenta nuevamente')
+    ingreso_usuario = input('usuario: ')
+    ingreso_contrasena = input('contraseña: ')
+    intentos += 1
+
+    if usuario == ingreso_usuario and contrasena == ingreso_contrasena:
+        print(' Felicitaciones.... Ingresaste')
+
+if usuario != ingreso_usuario and contrasena != ingreso_contrasena:
+    print('\nAdios,no pudiste ingresar')
+
+

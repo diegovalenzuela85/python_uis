@@ -111,6 +111,6 @@ while usuario != ingreso_usuario or contrasena != ingreso_contrasena and intento
             print('Saliste.. muchas gracias')
 
 if usuario != ingreso_usuario and contrasena != ingreso_contrasena:
-    print('\nAdios,no pudiste ingresar')
+    print('\nAdios,no pudiste ingresar.')
 
 

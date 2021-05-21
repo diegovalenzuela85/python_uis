@@ -89,7 +89,7 @@ contrasena = 'MisionTic2021'
 
 intentos = 0
 
-while usuario != ingreso_usuario and contrasena != ingreso_contrasena and intentos < 3:
+while usuario != ingreso_usuario or contrasena != ingreso_contrasena and intentos < 3:
     print('Datos incorrectos. Por favor intenta nuevamente')
     ingreso_usuario = input('usuario: ')
     ingreso_contrasena = input('contraseña: ')

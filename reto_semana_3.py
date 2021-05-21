@@ -96,7 +96,19 @@ while usuario != ingreso_usuario and contrasena != ingreso_contrasena and intent
     intentos += 1
 
     if usuario == ingreso_usuario and contrasena == ingreso_contrasena:
-        print(' Felicitaciones.... Ingresaste')
+        seleccion = int(input('\n1. Registrar ingreso de empleado.\n2. Ver empleados ingresados.\n'
+              '3. Registrar ingreso de visitantes.\n4. Ver visitantes ingresados.\n'
+              '0. Salir.\n-> '))
+        if seleccion == 1:
+            print('estas en 1')
+        if seleccion == 2:
+            print('estas en 2')
+        if seleccion == 3:
+            print('estas en 3')
+        if seleccion == 4:
+            print('estas en 4')
+        if seleccion == 0:
+            print('Saliste.. muchas gracias')
 
 if usuario != ingreso_usuario and contrasena != ingreso_contrasena:
     print('\nAdios,no pudiste ingresar')

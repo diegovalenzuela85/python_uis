@@ -154,6 +154,18 @@
 # print('\nMuchas gracias por utilizar el programa.')
 
 
+# pregunta = input('Deseas introducir numeros pares: ')
+#
+# while pregunta == "S" or pregunta == "s":
+#     num = int(input('Escribe numero par: '))
+#     par = num % 2
+#     if par == 0:
+#         pregunta = input('Deseas introducir de nuevo numeros pares: ')
+#     else:
+#         print('El numero ingresado es impar')
+#
+# else:
+#     print('Chao')
 
 # Escriba un programa que calcule si un numero es primo o no
 # Los Numeros primos son unicamente divisibles en dos casos, es decir cuando dividimos en 1 y por si mismos

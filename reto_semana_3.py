@@ -81,55 +81,102 @@
 #
 # Solucione el reto, escribiendo el código que represente la automatización del proceso de registro de empleados y visitantes.
 
-# ingreso_usuario = ""
-# ingreso_contrasena = ""
-#
-# usuario = 'admin'
-# contrasena = 'MisionTic2021'
-#
-# intentos = 0
-#
-# while usuario != ingreso_usuario or contrasena != ingreso_contrasena and intentos < 3:
-#     print('Datos incorrectos. Por favor intenta nuevamente')
-#     ingreso_usuario = input('usuario: ')
-#     ingreso_contrasena = input('contraseña: ')
-#     intentos += 1
-#
-#     if usuario == ingreso_usuario and contrasena == ingreso_contrasena:
-#         seleccion = int(input('\n1. Registrar ingreso de empleado.\n2. Ver empleados ingresados.\n'
-#               '3. Registrar ingreso de visitantes.\n4. Ver visitantes ingresados.\n'
-#               '0. Salir.\n-> '))
-#         if seleccion == 1:
-#             print('estas en 1')
-#         if seleccion == 2:
-#             print('estas en 2')
-#         if seleccion == 3:
-#             print('estas en 3')
-#         if seleccion == 4:
-#             print('estas en 4')
-#         if seleccion == 0:
-#             print('Saliste.. muchas gracias')
-#
-# if usuario != ingreso_usuario and contrasena != ingreso_contrasena:
-#     print('\nAdios,no pudiste ingresar.')
+ingreso_usuario = input('usuario: ')
+ingreso_contrasena = input('contraseña: ')
 
-while True:
-    seleccion = int(input('''
-    [1] Registrar ingreso de empleado.
-    [2] Ver empleados ingresados.
-    [3] Registrar ingreso de visitantes.
-    [4] Ver visitantes ingresados.
-    [0] Salir.
-    Escribe la acción que deseas realizar: 
-    '''))
-    if seleccion == 1:
-        print('estas en 1')
-    elif seleccion == 2:
-        print('estas en 2')
-    elif seleccion == 3:
-        print('estas en 3')
-    elif seleccion == 4:
-        print('estas en 4')
-    elif seleccion == 0:
-        print('Saliste.. muchas gracias')
+usuario = 'admin'
+contrasena = 'MisionTic2021'
+
+intentosLogin = 1
+
+while usuario != ingreso_usuario or contrasena != ingreso_contrasena:
+    if intentosLogin == 3:
+        print()
+        print('Adios,no pudiste ingresar.')
         break
+    else:
+        print('Datos incorrectos. Por favor intenta nuevamente')
+        ingreso_usuario = input('usuario: ')
+        ingreso_contrasena = input('contraseña: ')
+        intentosLogin += 1
+
+if usuario == ingreso_usuario and contrasena == ingreso_contrasena:
+    while True:
+        print()
+        print('- 1. Registrar ingreso de empleado.')
+        print('- 2. Ver empleados ingresados')
+        print('- 3. Registrar ingreso de visitantes.')
+        print('- 4. Ver visitantes ingresados.')
+        print('- 0. Salir.')
+        seleccion = int(input('Ingresa el numero correspondiente: '))
+        if seleccion == 1:
+            print('estas en 1')
+            dataEmpleados = ''
+            dataVisitantes = ''
+            nombre = ''
+            while True:
+                nombre = input('Ingresa un Empleado: ')
+                if nombre == '':
+                    break
+                else:
+                    dataEmpleados += nombre
+                    dataEmpleados += ", "
+        if seleccion == 2:
+            print(f'Tienes guardados estos Empleados: {dataEmpleados}')
+        elif seleccion == 3:
+            while True:
+                nombre = input('Ingresa un visitante: ')
+                if nombre == '':
+                    break
+                else:
+                    dataVisitantes += nombre
+                    dataVisitantes += ", "
+        elif seleccion == 4:
+            print('estas en 4')
+            print(f'Tienes guardados estos nombres: {dataVisitantes}')
+        elif seleccion == 0:
+            print()
+            print('Saliste... muchas gracias')
+            break
+
+# if usuario != ingreso_usuario and contrasena != ingreso_contrasena:
+#     print()
+#     print('Adios,no pudiste ingresar.')
+
+
+# while True:
+#     print()
+#     print('1. Registrar ingreso de empleado.')
+#     print('2. Ver empleados ingresados')
+#     print('3. Registrar ingreso de visitantes.')
+#     print('4. Ver visitantes ingresados.')
+#     print('0 . Salir.')
+#     seleccion = int(input('Ingresa el numero correspondiente: '))
+#     if seleccion == 1:
+#         print('estas en 1')
+#         data = ''
+#         nombre = ''
+#         while True:
+#             nombre = input('Ingresa un nombre: ')
+#             if nombre == '':
+#                 break
+#             else:
+#                 data += nombre
+#                 data += ", "
+#     if seleccion == 2:
+#         print(f'Tienes guardados estos nombres: {data}')
+#     elif seleccion == 3:
+#         while True:
+#             nombre = input('Ingresa un nombre: ')
+#             if nombre == '':
+#                 break
+#             else:
+#                 data += nombre
+#                 data += ", "
+#     elif seleccion == 4:
+#         print('estas en 4')
+#         print(f'Tienes guardados estos nombres: {data}')
+#     elif seleccion == 0:
+#         print()
+#         print('Saliste... muchas gracias')
+#         break

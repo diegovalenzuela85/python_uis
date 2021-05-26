@@ -407,3 +407,107 @@
 #     if i in frase:
 #         acumulador += f"{i} "
 # print(f'La vocales encontradas en la frase son: {acumulador}')
+
+
+# CLASE 25/05/2021-----------------------------------------------------------------------------------------------------
+
+## 01 - Elaborar un algoritmo que permita mostrar el sueldo promedio de un grupo de empleados.
+
+# salario = 0
+# sumaSalarios = 0
+# empleados = int(input('Ingresa el numero de empleados: '))
+# for i in range(1,empleados+1):
+#     salario = int(input(f'Ingresa el salario del empleado {i}: '))
+#     sumaSalarios += salario
+# promedio = sumaSalarios / empleados
+# print(f'El sueldo promedio de {empleados} empleados es {promedio}')
+
+
+
+## 02 - Elaborar un algoritmo que solicite la edad de 10 personas, y que muestre cuantos son mayores y cuantos
+## menores.
+
+# cuentaMayores = 0
+# cuentaMenores = 0
+# for i in range(1,11):
+#     edad = int(input('Ingresa la edad correspondiente a la persona {}: '.format(i)))
+#     if edad >= 18:
+#         cuentaMayores += 1
+#     else:
+#         cuentaMenores += 1
+# print()
+# print('Tenemos {} personas mayores y {} personas menores.'.format(cuentaMayores, cuentaMenores))
+
+
+
+## 04 - Elabore un algoritmo que solicite ingresar letras hasta que ingresen una vocal.
+
+# estado = True
+# while estado:
+#     letra = input('Ingresa una letra por favor: ')
+#     ingreso = letra.upper()
+#     if ingreso == 'A' or ingreso == 'E' or ingreso == 'I' or ingreso == 'O' or ingreso == 'U':
+#         estado = False
+
+
+
+## 05 - Elaborar un programa que permita ingresar una frase y contar la cantidad de vocales, por separado.
+## es decir cuantas vocales A,E,I,O,U  se ingresaron en la frase.
+
+# frase = input('Escribe una frase por favor: ')
+# vocales = 'aeiou'
+# contA = 0
+# contE = 0
+# contI = 0
+# contO = 0
+# contU = 0
+# frase = frase.upper()
+# vocales = vocales.upper()
+# for i in frase:
+#     if i in vocales:
+#         if i == 'A':
+#             contA += 1
+#         elif i == 'E':
+#             contE += 1
+#         elif i == 'I':
+#             contI += 1
+#         elif i == 'O':
+#             contO += 1
+#         elif i == 'U':
+#             contU += 1
+# print(f'Encontramos la vocal A: {contA} veces')
+# print(f'Encontramos la vocal E: {contE} veces')
+# print(f'Encontramos la vocal I: {contI} veces')
+# print(f'Encontramos la vocal O: {contO} veces')
+# print(f'Encontramos la vocal U: {contU} veces')
+
+## 06 - Elaborar un programa para obtener el resultado del escrutinio en las elecciones del delegado del colegio
+## cosiderar que hay 20 electores y se han presentado 3 candidatos, todos votaron, el algoritmo debe
+## declarar el ganador por mayoria simple.
+
+# candidatos = 3
+# electores = 20
+# cont1 = 0
+# cont2 = 0
+# cont3 = 0
+# contx = 0
+#
+# for i in range(electores):
+#     voto = int(input('Escriba es numero del cadidato que desea votar: '))
+#     if voto == 1:
+#         cont1 += 1
+#     elif voto == 2:
+#         cont2 += 1
+#     elif voto == 3:
+#         cont3 += 1
+#     else:
+#         print("No existe ese candidato")
+#         contx += 1
+# if cont1 > cont2 and cont1 > cont3:
+#     print('El ganador es el candidato 1 con {} votos'.format(cont1))
+# elif cont2 > cont1 and cont2 > cont3:
+#     print('El ganador es el candidato 2 con {} votos'.format(cont2))
+# elif cont2 > cont1 and cont2 > cont3:
+#     print('El ganador es el candidato 3 con {} votos'.format(cont3))
+# else:
+#     print('No existe ganador. Fueron {} votos anulados o erroneos'.format(contx))

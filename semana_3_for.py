@@ -155,7 +155,7 @@
 
 # EJERCICIOS PDF ---------------------------------------------------------------------------------------------
 
-# 01 - SDado un numero generar su tabla de multiplicación
+# 01 - Dado un numero generar su tabla de multiplicación
 
 # num = int(input('Introduce un numero por favor: '))
 # for i in range(1,11):
@@ -205,6 +205,27 @@
 
 # 04 - Escriba un programa que pida dos números enteros y escriba qué números son pares
 # y cuáles impares desde el primero hasta el segundo.
+
+# num1 = int(input('Ingresa un numero: '))
+# num2 = int(input('Ingresa otro numero: '))
+# num_pares = ''
+# num_impares = ''
+# corrida = 0
+# if num1 > num2:
+#     corrida = -1
+#     num2 += -2
+# else:
+#     corrida = 1
+# for i in range(num1,num2+1,corrida):
+#     num = i % 2
+#     if num == 0:
+#         num_pares += f'{i} '
+#     elif num != 0:
+#         num_impares += "{} ".format(i)
+# print('En el rango [{},{}]. Encontramos los numeros pares {} y los numeros impares {}'.format(num1, num2, num_pares, num_impares))
+# print(f'En el rango [{num1},{num2}]. Encontramos los numeros pares {num_pares} y los numeros impares {num_impares}')
+
+
 
 # intentos = 1
 # num1 = int(input('Ingresa un numero entero positivo: '))

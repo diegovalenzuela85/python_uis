@@ -1,3 +1,6 @@
+import colorama
+from colorama import Back, Fore, Style
+
 # for i in range(3):
 #     print(i)
 
@@ -514,7 +517,7 @@
 # contx = 0
 #
 # for i in range(electores):
-#     voto = int(input('Escriba es numero del cadidato que desea votar: '))
+#     voto = int(input(Fore.MAGENTA + 'Escriba es numero del cadidato que desea votar: '))
 #     if voto == 1:
 #         cont1 += 1
 #     elif voto == 2:
@@ -525,10 +528,10 @@
 #         print("No existe ese candidato")
 #         contx += 1
 # if cont1 > cont2 and cont1 > cont3:
-#     print('El ganador es el candidato 1 con {} votos'.format(cont1))
+#     print(Fore.CYAN + 'El ganador es el candidato 1 con {} votos'.format(cont1))
 # elif cont2 > cont1 and cont2 > cont3:
-#     print('El ganador es el candidato 2 con {} votos'.format(cont2))
+#     print(Fore.CYAN + 'El ganador es el candidato 2 con {} votos'.format(cont2))
 # elif cont2 > cont1 and cont2 > cont3:
-#     print('El ganador es el candidato 3 con {} votos'.format(cont3))
+#     print(Fore.CYAN + 'El ganador es el candidato 3 con {} votos'.format(cont3))
 # else:
-#     print('No existe ganador. Fueron {} votos anulados o erroneos'.format(contx))
+#     print(Fore.CYAN + 'No existe ganador. Fueron {} votos anulados o erroneos'.format(contx))

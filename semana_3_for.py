@@ -531,7 +531,7 @@ from colorama import Back, Fore, Style
 #     print(Fore.CYAN + 'El ganador es el candidato 1 con {} votos'.format(cont1))
 # elif cont2 > cont1 and cont2 > cont3:
 #     print(Fore.CYAN + 'El ganador es el candidato 2 con {} votos'.format(cont2))
-# elif cont2 > cont1 and cont2 > cont3:
+# elif cont3 > cont1 and cont3 > cont2:
 #     print(Fore.CYAN + 'El ganador es el candidato 3 con {} votos'.format(cont3))
 # else:
 #     print(Fore.CYAN + 'No existe ganador. Fueron {} votos anulados o erroneos'.format(contx))

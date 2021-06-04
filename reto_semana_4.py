@@ -80,3 +80,94 @@ A partir de los puntos anteriores escriba la función en Python que permita toma
 de tal manera que al final retorne los valores establecidos en el enunciado, en el orden en que se han especificado.
 
 '''
+
+import random
+
+huevos_ingreso = int(input('Ingresa la cantidad de huevos dispuesta: '))
+pesos_menor_huevos, pesos_mayor_huevos = 40, 70
+lista_huevos, lista_huevos_a, lista_huevos_aa, lista_huevos_aaa, lista_huevos_bc = [], [], [], [], []
+for huevos in range(huevos_ingreso):
+    huevo_peso = round(random.uniform(pesos_menor_huevos, pesos_mayor_huevos), 2)
+    lista_huevos.append(huevo_peso) # Lista de huevos con su respectivo peso
+# print(lista_huevos) # IMPRIMIMOS Lista de huevos con su respectivo peso
+# print(f"Cantidad de huevos: {len(lista_huevos)}") # IMPRIMIMOS Cantidad huevos en Lista
+#
+# def clasificacion_huevos(lista_huevos):
+#     for huevo in lista_huevos:
+#         if huevo >= 53 and huevo < 60:
+#             lista_huevos_a.append(huevo)
+#         elif huevo >= 60 and huevo < 67:
+#             lista_huevos_aa.append(huevo)
+#         elif huevo >= 67:
+#             lista_huevos_aaa.append(huevo)
+#         else:
+#             lista_huevos_bc.append(huevo)
+#
+#     def calcular_bandejas(cantidad, bandeja):
+#         bandejas = cantidad // bandeja
+#         return bandejas
+#
+#     bandejas_a = 30
+#     bandejas_aa = 24
+#     bandejas_aaa = 12
+#     bandejas_bc = 30
+#
+#     cta_huevos_a = len(lista_huevos_a)
+#     cta_huevos_aa = len(lista_huevos_aa)
+#     cta_huevos_aaa = len(lista_huevos_aaa)
+#     cta_huevos_bc = len(lista_huevos_bc)
+#
+#     global lista_salida
+#
+#     lista_salida = []
+#
+#     total_bandejas_a = calcular_bandejas(cta_huevos_a, bandejas_a)
+#     total_bandejas_aa = calcular_bandejas(cta_huevos_aa, bandejas_aa)
+#     total_bandejas_aaa = calcular_bandejas(cta_huevos_aaa, bandejas_aaa)
+#     total_bandejas_bc = calcular_bandejas(cta_huevos_bc, bandejas_bc)
+#
+#     datos_salida_a = {'tipo_huevos': 'A', 'numero_huevos': cta_huevos_a, 'numero_bandejas': total_bandejas_a}
+#     lista_salida.append(datos_salida_a)
+#     datos_salida_aa = {'tipo_huevos': 'AA', 'numero_huevos': cta_huevos_aa, 'numero_bandejas': total_bandejas_aa}
+#     lista_salida.append(datos_salida_aa)
+#     datos_salida_aaa = {'tipo_huevos': 'AAA', 'numero_huevos': cta_huevos_aaa, 'numero_bandejas': total_bandejas_aaa}
+#     lista_salida.append(datos_salida_aaa)
+#     datos_salida_bc = {'tipo_huevos': 'BC', 'numero_huevos': cta_huevos_bc, 'numero_bandejas': total_bandejas_bc}
+#     lista_salida.append(datos_salida_bc)
+#     #print(lista_salida)
+#     return lista_salida
+#
+# clasificacion_huevos(lista_huevos)
+# print(lista_salida)
+
+
+#____________________________________________________________________________________________________________________
+
+# import  math
+# def clasificacion_huevos(lista_peso_huevos):
+#     huevo_tipo_a = 0
+#     huevo_tipo_aa = 0
+#     huevo_tipo_aaa = 0
+#     huevo_tipo_bc = 0
+#     for huevo in lista_peso_huevos:
+#         if huevo >= 53 and huevo < 60:
+#             huevo_tipo_a += 1
+#         elif huevo >= 60 and huevo < 67:
+#             huevo_tipo_aa += 1
+#         elif huevo >= 67:
+#             huevo_tipo_aaa += 1
+#         else:
+#             huevo_tipo_bc += 1
+#     def calcular_bandejas(huevo_tipo_a, huevo_tipo_aa, huevo_tipo_aaa, huevo_tipo_bc):
+#         bandejas_tipo_a = math.floor(huevo_tipo_a/30)
+#         bandejas_tipo_aa = math.floor(huevo_tipo_aa/24)
+#         bandejas_tipo_aaa = math.floor(huevo_tipo_aaa/12)
+#         bandejas_tipo_bc = math.floor(huevo_tipo_bc/30)
+#         return bandejas_tipo_a, bandejas_tipo_aa, bandejas_tipo_aaa, bandejas_tipo_bc
+#     bandejas_tipo_a, bandejas_tipo_aa, bandejas_tipo_aaa, bandejas_tipo_bc = calcular_bandejas(huevo_tipo_a, huevo_tipo_aa, huevo_tipo_aaa, huevo_tipo_bc)
+#     diccionario_a ={'tipo_huevos': 'A', 'numero_huevos': huevo_tipo_a, 'numero_bandejas': bandejas_tipo_a}
+#     diccionario_aa ={'tipo_huevos': 'AA', 'numero_huevos': huevo_tipo_aa, 'numero_bandejas': bandejas_tipo_aa}
+#     diccionario_aaa ={'tipo_huevos': 'AAA', 'numero_huevos': huevo_tipo_aaa, 'numero_bandejas': bandejas_tipo_aaa}
+#     diccionario_bc ={'tipo_huevos': 'BC', 'numero_huevos': huevo_tipo_bc, 'numero_bandejas': bandejas_tipo_bc}
+#     lista_diccionarios_salida = [diccionario_a, diccionario_aa, diccionario_aaa, diccionario_bc]
+#     return lista_diccionarios_salida

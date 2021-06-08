@@ -179,31 +179,37 @@
 # calculadoraMes(cadena)
 
 
-def calculadoraMes(registroDeAhorros,nombre):
-    separa_punto_coma = registroDeAhorros.split(';')
-    mes0, mes1, mes2, mes3 = "", "", "", ""
-    list_num0, list_num1, list_num2, list_num3 = [], [], [], []
-    for cadena in range(len(separa_punto_coma)):
-        if cadena == 0:
-            mes0 = separa_punto_coma[cadena]
-            sin_coma0 = mes0.split(',')
-            mes0 = sin_coma0.pop(0)
-            list_num0 = [int(i) for i in sin_coma0]
-        elif cadena == 1:
-            mes1 = separa_punto_coma[cadena]
-            sin_coma1 = mes1.split(',')
-            mes1 = sin_coma1.pop(0)
-            list_num1 = [int(i) for i in sin_coma1]
-        elif cadena == 2:
-            mes2 = separa_punto_coma[cadena]
-            sin_coma2 = mes2.split(',')
-            mes2 = sin_coma2.pop(0)
-            list_num2 = [int(i) for i in sin_coma2]
-        elif cadena == 3:
-            mes3 = separa_punto_coma[cadena]
-            sin_coma3 = mes3.split(',')
-            mes3 = sin_coma3.pop(0)
-            list_num3 = [int(i) for i in sin_coma3]
-    respuesta = (nombre, {mes0: sum(list_num0), mes1: sum(list_num1), mes2: sum(list_num2), mes3: sum(list_num3)})
-    return respuesta
-print(calculadoraMes("Enero,4,3,4;Febrero,4,3;Marzo,4,3,4;Abril,4,3,4,4", "daniel"))
+# def calculadoraMes(registroDeAhorros,nombre):
+#     separa_punto_coma = registroDeAhorros.split(';')
+#     mes0, mes1, mes2, mes3 = "", "", "", ""
+#     list_num0, list_num1, list_num2, list_num3 = [], [], [], []
+#     for cadena in range(len(separa_punto_coma)):
+#         if cadena == 0:
+#             mes0 = separa_punto_coma[cadena]
+#             sin_coma0 = mes0.split(',')
+#             mes0 = sin_coma0.pop(0)
+#             list_num0 = [int(i) for i in sin_coma0]
+#         elif cadena == 1:
+#             mes1 = separa_punto_coma[cadena]
+#             sin_coma1 = mes1.split(',')
+#             mes1 = sin_coma1.pop(0)
+#             list_num1 = [int(i) for i in sin_coma1]
+#         elif cadena == 2:
+#             mes2 = separa_punto_coma[cadena]
+#             sin_coma2 = mes2.split(',')
+#             mes2 = sin_coma2.pop(0)
+#             list_num2 = [int(i) for i in sin_coma2]
+#         elif cadena == 3:
+#             mes3 = separa_punto_coma[cadena]
+#             sin_coma3 = mes3.split(',')
+#             mes3 = sin_coma3.pop(0)
+#             list_num3 = [int(i) for i in sin_coma3]
+#     respuesta = (nombre, {mes0: sum(list_num0), mes1: sum(list_num1), mes2: sum(list_num2), mes3: sum(list_num3)})
+#     return respuesta
+# print(calculadoraMes("Enero,4,3,4;Febrero,4,3;Marzo,4,3,4;Abril,4,3,4,4", "daniel"))
+
+def palabras(cadena):
+    lista = cadena.split(',')
+    return lista
+
+print(palabras("Inglés,Física, Sociales,Historia,Programación"))
